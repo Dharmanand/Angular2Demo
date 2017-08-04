@@ -6,20 +6,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-var employee_component_1 = require("./employee/employee.component");
-var AppModule = (function () {
-    function AppModule() {
+var EmployeeComponent = (function () {
+    function EmployeeComponent() {
+        this.firstName = "Kumar";
+        this.lastName = 'Dharmanand';
+        this.gender = 'Male';
+        this.age = 31;
     }
-    return AppModule;
+    return EmployeeComponent;
 }());
-AppModule = __decorate([
-    core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent, employee_component_1.EmployeeComponent],
-        bootstrap: [app_component_1.AppComponent]
+EmployeeComponent = __decorate([
+    core_1.Component({
+        selector: 'my-employee',
+        templateUrl: 'app/employee/employee.component.html',
+        styleUrls: ['app/employee/employee.component.css']
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], EmployeeComponent);
+exports.EmployeeComponent = EmployeeComponent;
+//# sourceMappingURL=employee.component.js.map
