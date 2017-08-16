@@ -6,16 +6,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var EventBindingComponent = (function () {
+    function EventBindingComponent() {
     }
-    return AppComponent;
+    EventBindingComponent.prototype.clickMe = function () {
+        console.log("Button clicked !!");
+    };
+    return EventBindingComponent;
 }());
-AppComponent = __decorate([
+EventBindingComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        templateUrl: "./app-route.html"
+        selector: '<app-tags>',
+        template: "\n        <div class=\"container\">\n            <button type=\"button\" class=\"btn btn-info\" (click)='clickMe()'>Click Me</button>\n        </div>\n    "
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], EventBindingComponent);
+exports.EventBindingComponent = EventBindingComponent;
+//# sourceMappingURL=eventBinding-component.js.map

@@ -7,7 +7,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var forms_1 = require("@angular/forms");
+var router_1 = require("@angular/router");
 var app_component_1 = require("./app.component");
+var templateForm_component_1 = require("./practices/templateFormModel/templateForm.component");
+var reactiveForm_component_1 = require("./practices/reactive/reactiveForm.component");
+var pageNotFound_component_1 = require("./others/pageNotFound.component");
+var item_component_1 = require("./grocery/items/item-component");
+var appRoutes = [
+    { path: 'template', component: templateForm_component_1.TemplateFormComponent },
+    { path: 'reactive', component: reactiveForm_component_1.ReactiveFormComponent },
+    { path: '', component: templateForm_component_1.TemplateFormComponent },
+    { path: '**', component: pageNotFound_component_1.PageNotFoundComponent }
+];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -15,9 +27,10 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent],
-        bootstrap: [app_component_1.AppComponent]
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, router_1.RouterModule.forRoot(appRoutes)],
+        declarations: [app_component_1.AppComponent, templateForm_component_1.TemplateFormComponent, item_component_1.ItemComponent, reactiveForm_component_1.ReactiveFormComponent, pageNotFound_component_1.PageNotFoundComponent],
+        bootstrap: [app_component_1.AppComponent],
+        providers: []
     })
 ], AppModule);
 exports.AppModule = AppModule;

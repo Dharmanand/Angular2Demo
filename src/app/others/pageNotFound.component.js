@@ -6,16 +6,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var PageNotFoundComponent = (function () {
+    function PageNotFoundComponent() {
     }
-    return AppComponent;
+    return PageNotFoundComponent;
 }());
-AppComponent = __decorate([
+PageNotFoundComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        templateUrl: "./app-route.html"
+        template: '<h3>The Page you are looking which does not exist !</h3>'
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], PageNotFoundComponent);
+exports.PageNotFoundComponent = PageNotFoundComponent;
+//# sourceMappingURL=pageNotFound.component.js.map

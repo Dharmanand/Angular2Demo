@@ -1,0 +1,32 @@
+<div class="alert alert-success" *ngIf="submitted">
+    <strong>Success!</strong> Your form is submitted successfully !!.
+  </div>
+
+<div class="container">
+    <form (ngSubmit)="onSubmit()" *ngIf="!submitted" #form="ngForm">
+        Form Valid: {{form.valid}}
+        <div class="form-group" [ngClass]="{'has-error': name.touched && name.invalid,
+                'has-success': name.touched && name.valid}">
+            <label class="control-label">Name:</label>
+            <input type="text" class="form-control"
+            name="name" [(ngModel)]="user.uname" 
+            required #name="ngModel">
+            <span class="help-block" *ngIf="name.touched && name.invalid">
+                Name is required
+            </span>
+            Valid: {{name.valid}}<br>
+            Touched: {{name.touched}}
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': position.touched && position.invalid,
+                'has-success': position.touched && position.valid}">
+            <label class="control-label">Position:</label>
+            <input type="text" class="form-control" name="position" 
+            [(ngModel)]="user.uposition" #position="ngModel" required> 
+            <span class="help-block" *ngIf="position.touched && position.invalid">
+                Position is required
+            </span>
+        </div>
+        <button type="submit" class="btn btn-info" [disabled]="form.invalid">Submit</button>
+    </form>
+    {{diagnostic}}
+</div>
