@@ -5,6 +5,8 @@ li.open > a > span {
   border-bottom: 4px dashed !important;
 }
 </style>
+
+
   
   <h1>App Route</h1>
  
@@ -22,6 +24,18 @@ li.open > a > span {
                 <li routerLinkActive="active"><a routerLink="reactive">Reactive</a></li>
                 </ul>
         </li>
-
+        <button type="button" style="background-color: #000; text-align: left;" class="btn btn-success col-sm-12" data-toggle="collapse" data-target="#demo1">
+            <span></span> Template
+        </button>
+        <div id="demo1" class="collapse">
+           <p routerLinkActive="active"><a routerLink="template">Template</a></p>
+        </div>
+        <button type="button" style="background-color: #000; text-align: left;" class="btn btn-success col-sm-12" data-toggle="collapse" data-target="#demo2">
+            <span></span> Reactive
+        </button>
+        <div id="demo2" class="collapse">
+           <p routerLinkActive="active"><a routerLink="reactive">Reactive</a></p>
+        </div>
+        
     <router-outlet></router-outlet>
     </div>
