@@ -1,0 +1,38 @@
+<style>
+ .btn .caret {
+    position: absolute;
+    left: calc(95%);
+    top: calc(45%);
+}
+</style>
+
+<div class="container-fluid">
+<div class="col-sm-3">
+        <!-- <nav class="navbar navbar-inverse"> -->
+        <nav class="navbar">  
+                <!-- <div class="navbar-header"> -->
+                <!-- <div class="nav nav-pills nav-stacked">
+                    <a routerLink="/" class="navbar-brand" routerLinkActive="active">My Routing App</a>
+                </div> -->
+                <!-- <ul class="nav navbar-nav"> -->
+                    <button type="button" style="background-color: #000; text-align: unset; border: 1px" class="btn btn-success col-sm-12" data-toggle="collapse" data-target="#demo1">
+                        Home <span class="caret"></span>
+                    </button>
+                    <div id="demo1" class="collapse">
+                        <ul><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact:true }">Home</a></ul>
+                    </div>
+                    <button type="button" style="background-color: #000; text-align: unset;" class="btn btn-success col-sm-12" data-toggle="collapse" data-target="#demo2">
+                        Info <span class="caret"></span>
+                    </button>
+                    <div id="demo2" class="collapse">
+                        <ul><a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact:true }">About</a></ul>
+                        <ul><a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact:true }">Contact</a></ul>
+                    </div>
+                
+           
+        </nav>
+    </div>
+    <main  class="col-sm-9">
+        <router-outlet></router-outlet>
+    </main>
+     </div>
